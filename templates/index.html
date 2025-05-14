@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Наш Ресторан</title>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Логотип" class="logo">
+        <h1>Наш ресторан Luxe Star</h1>
+    </div>
+    <div class="background"></div>
+    <div class="description">
+        <p>Добро пожаловать в наш ресторан!</p>
+        <a href="/menu" class="button">Меню</a>
+    </div>
+    <div class="footer">
+        <p>Описание ресторана: у нас лучшие блюда на любой вкус!</p>
+        <p>Контакты: +123 123 1234 | Электронная почта: luxe_star@restik.com</p>
+        <p>&copy; 2024 Luxe Star</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 300px;
+}
+
+.background {
+    background-image: url('../img/restaurant_background.gif');
+    background-size: cover;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.description {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.button {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
