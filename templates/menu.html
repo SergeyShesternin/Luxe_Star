@@ -7,13 +7,35 @@
     <title>Меню - Наш Ресторан</title>
 </head>
 <body>
-    <h1>Меню</h1>
-    <ul>
-        <li>Блюдо 1 - 500 руб.</li>
-        <li>Блюдо 2 - 700 руб.</li>
-        <li>Блюдо 3 - 450 руб.</li>
-        <li>Десерт - 300 руб.</li>
-    </ul>
-    <a href="/">На главную</a>
+    <div class="header">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+        <h1>Наш ресторан Luxe Star</h1>
+        <nav class="nav">
+            <a href="/" class="nav-button">Главная</a>
+            <a href="/services" class="nav-button">Услуги</a>
+            <a href="/contacts" class="nav-button">Контакты</a>
+        </nav>
+    </div>
+
+    <div class="menu-container">
+        <div class="menu-content">
+            <h1>Меню</h1>
+            <ul>
+                <li>Блюдо 1 - 500 руб.</li>
+                <li>Блюдо 2 - 700 руб.</li>
+                <li>Блюдо 3 - 450 руб.</li>
+                <li>Десерт - 300 руб.</li>
+                <li>Блюдо 4 - 600 руб.</li>
+                <li>Блюдо 5 - 800 руб.</li>
+                <li>Блюдо 6 - 550 руб.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Описание ресторана: у нас лучшие блюда на любой вкус!</p>
+        <p>Контакты: +123 123 1234 | Электронная почта: luxe_star@restik.com</p>
+        <p>&copy; 2024 Luxe Star</p>
+    </div>
 </body>
 </html>

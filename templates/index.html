@@ -8,18 +8,22 @@
 </head>
 <body>
     <div class="header">
-        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Логотип" class="logo">
-        <h1>Наш ресторан Luxe Star</h1>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+        <nav class="nav">
+            <a href="/menu" class="nav-button">Меню</a>
+            <a href="/services" class="nav-button">Услуги</a>
+            <a href="/contacts" class="nav-button">Контакты</a>
+        </nav>
+        <div style="height: 300px;"></div>
+        <h1 class="text">Добро пожаловать в наш ресторан Luxe Star!</h1>
     </div>
     <div class="background"></div>
-    <div class="description">
-        <p>Добро пожаловать в наш ресторан!</p>
-        <a href="/menu" class="button">Меню</a>
+    <div class="content">
     </div>
     <div class="footer">
-        <p>Описание ресторана: у нас лучшие блюда на любой вкус!</p>
+        <p>У нас лучшие блюда на любой вкус!</p>
         <p>Контакты: +123 123 1234 | Электронная почта: luxe_star@restik.com</p>
-        <p>&copy; 2024 Luxe Star</p>
+        <p>&copy; 2030 Luxe Star</p>
     </div>
 </body>
 </html>
