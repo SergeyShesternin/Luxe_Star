@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12549b6f-2c21-430a-8ccd-479060623568" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Very interesting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant_site/templates/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant_site/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant_site/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant_site/templates/services.html" afterDir="false" />
+    <list default="true" id="12549b6f-2c21-430a-8ccd-479060623568" name="Changes" comment="Я взял код Тимофея и прикрутил к нему БД">
+      <change beforePath="$PROJECT_DIR$/restaurant_site/templates/contacts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant_site/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant_site/templates/menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant_site/templates/services.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Siniy" />
+        <entry key="$PROJECT_DIR$" value="Tim-work" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Seriy"
+    "git-widget-placeholder": "Siniy"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -66,6 +64,15 @@
       <option name="presentableId" value="Default" />
       <updated>1747463773141</updated>
     </task>
+    <task id="LOCAL-00001" summary="Я взял код Тимофея и прикрутил к нему БД">
+      <option name="closed" value="true" />
+      <created>1747490079482</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747490079482</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,5 +97,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Я взял код Тимофея и прикрутил к нему БД" />
+    <option name="LAST_COMMIT_MESSAGE" value="Я взял код Тимофея и прикрутил к нему БД" />
   </component>
 </project>
