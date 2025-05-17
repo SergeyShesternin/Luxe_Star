@@ -294,7 +294,6 @@ def reg():
     return render_template_string(html_content)
 
 
-
 @app.route('/forgot_pass', methods=['GET', 'POST'])
 def forgot_pass():
     if request.method == 'POST':
@@ -370,7 +369,6 @@ def forgot_pass():
     </html>
     '''
     return render_template_string(html_content)
-
 
 
 @app.route('/reset_pass/<int:user_id>', methods=['GET', 'POST'])
