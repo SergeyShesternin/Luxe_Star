@@ -1,0 +1,46 @@
+Index: restaurant_site/app.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from flask import Flask, render_template\r\n#импорт библиотек\r\n\r\napp = Flask(__name__) #запускаем фласк\r\n\r\n@app.route('/')\r\ndef home():\r\n    return render_template('index.html') #главная страница\r\n\r\n@app.route('/menu')\r\ndef menu():\r\n    return render_template('menu.html') #меню\r\n\r\n@app.route('/services')\r\ndef services():\r\n    return render_template('services.html') #услуги\r\n\r\n@app.route('/contacts')\r\ndef contacts():\r\n    return render_template('contacts.html') #контакты\r\n\r\nif __name__ == '__main__':\r\n    app.run(debug=True)\r\n    #конец
+===================================================================
+diff --git a/restaurant_site/app.py b/restaurant_site/app.py
+--- a/restaurant_site/app.py	
++++ b/restaurant_site/app.py	
+@@ -1,24 +1,29 @@
+ from flask import Flask, render_template
+ #импорт библиотек
+ 
+-app = Flask(__name__) #запускаем фласк
++app = Flask(__name__)  # запускаем фласк
+ 
++
+ @app.route('/')
+ def home():
+-    return render_template('index.html') #главная страница
++    return render_template('index.html')  # главная страница
+ 
++
+ @app.route('/menu')
+ def menu():
+-    return render_template('menu.html') #меню
++    return render_template('menu.html')  # меню
+ 
++
+ @app.route('/services')
+ def services():
+-    return render_template('services.html') #услуги
++    return render_template('services.html')  # услуги
+ 
++
+ @app.route('/contacts')
+ def contacts():
+-    return render_template('contacts.html') #контакты
++    return render_template('contacts.html')  # контакты
+ 
++
+ if __name__ == '__main__':
+     app.run(debug=True)
+-    #конец
+\ No newline at end of file
++    # конец
+\ No newline at end of file
