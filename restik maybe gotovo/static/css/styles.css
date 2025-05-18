@@ -1,0 +1,346 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}/* растягиваем на всю высоту и убираем отступы */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-shadow: #000 -1px -1px 0,
+                 #000 1px 1px 0;
+    overflow-x: hidden;
+    position: relative;
+}/* основные стили страницы шрифт, тень текста */
+
+.header-background {
+    background: url('../img/header.jpeg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 450px;
+}/* фон шапки */
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5)
+}/* затемнение поверх фона шапки */
+
+.header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 0px;
+}/* контейнер содержимого шапки с лого и меню навигации */
+
+.nav {
+    margin-top: 15px;
+}/* отступ для навигационного меню */
+
+.nav-button {
+           background: none;
+           border: none;
+           outline: none;
+           font-family: 'Playfair Display', serif;
+           font-size: 18px;
+           color: #fff;
+           text-transform: uppercase;
+           letter-spacing: 1px;
+           position: relative;
+           padding: 10px 20px;
+           cursor: pointer;
+           transition: all 0.3s ease;
+           text-decoration: none;
+           display: inline-block;
+}/* стили кнопок меню */
+
+.nav-button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+}/* анимация кнопок */
+
+.nav-button:hover {
+            color: #fff;
+            transform: translateY(-5px);
+}/* анимация кнопок */
+
+.nav-button:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+}/* анимация кнопок */
+
+.nav-button:active {
+            transform: translateY(-3px);
+}/* анимация кнопок */
+
+.logo {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 30px;
+    width: 300px;
+}/* стили лого */
+
+.content {
+    flex: 1;
+    padding: 20px;
+}/* основное содержимое страницы */
+
+.background {
+    background-image: url('../img/restaurant_background.gif');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}/* фон-гифка для главного экрана */
+
+.menu-container {
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}/* фон меню на всю страницу */
+
+.menu-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}/* карточка с блюдами */
+
+.menu-content h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 0 0 40px 0;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}/* карточка с блюдами */
+
+.menu-section {
+    margin-bottom: 40px;
+}/* разделы меню */
+
+.menu-section h2 {
+    font-size: 1.8rem;
+    color: #d57500;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 400;
+}/* разделы меню */
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}/* пункты меню */
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-name {
+    font-size: 1.2rem;
+    color: #fff;
+    flex: 2;
+}/* название блюда */
+
+.menu-item-price {
+    font-size: 1.2rem;
+    color: #ffd700;
+    flex: 1;
+    text-align: right;
+    font-weight: 500;
+}/* цена */
+
+.menu-item-desc {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-top: 5px;
+    font-style: italic;
+    width: 100%;
+}/* описание блюда */
+
+.contacts-container {
+    padding: 40px 20px;
+    color: white;
+}/* контейнер для контактов страницы */
+
+.contacts-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+}/* карточка с контактами */
+
+.contacts-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}/* стили для карточки с контактами */
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}/* сетка для контактов */
+
+.contact-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}/* контакт */
+
+.contact-item h2 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 400;
+}/* контакт */
+
+.contact-item p {
+    margin: 8px 0;
+    line-height: 1.6;
+}/* контакт */
+
+.icon {
+    margin-right: 10px;
+}/* иконки */
+
+.services-container {
+    padding: 60px 20px;
+    color: white;
+}/* контейнер страницы услуг */
+
+.services-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}/* основное содержимое услуг */
+
+.services-content h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #fff;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}/* cетка карточек услуг */
+
+.service-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}/* карточка услуги */
+
+.service-image {
+    height: 220px;
+    overflow: hidden;
+}/* стили для изображний */
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}/* изображения */
+
+.service-card h2 {
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin: 25px 0 15px;
+    font-weight: 400;
+}/* заголовок услуг */
+
+.service-card p {
+    padding: 0 25px 30px;
+    line-height: 1.6;
+    color: #ddd;
+}/* описание услуг */
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .services-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }/* стили */
+}
+
+.footer {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+}/* нижняя часть сайта */
+
+.login-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.login-btn {
+    background-color: #560c0e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #7b1114;
+}
