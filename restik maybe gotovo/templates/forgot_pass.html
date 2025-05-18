@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Забыли пароль</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Восстановить пароль</h2>
+        <form method="POST">
+            <input type="text" name="email" placeholder="Введите email" required><br>
+            <input type="text" name="recovery_code" placeholder="Код восстановления" required><br>
+            <button type="submit">Восстановить пароль</button>
+        </form>
+    </div>
+</body>
+</html>
