@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Контакты - Luxe Star</title>
+</head>
+<body>
+    <div class="header-background">
+        <div class="header-overlay"></div>
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+            <h1>Наш ресторан Luxe Star</h1>
+            <nav class="nav">
+                <a href="/" class="nav-button">Главная</a>
+                <a href="/menu" class="nav-button">Меню</a>
+                <a href="/services" class="nav-button">Услуги</a>
+                <a href="/contacts" class="nav-button active">Контакты</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="contacts-container">
+        <div class="contacts-content">
+            <h1>Наши контакты</h1>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h2><i class="icon">📍</i> Адрес</h2>
+                    <p>г. Москва, ********, д. **</p>
+                    <p>(Найдете короче)</p>
+                </div>
+
+                <div class="contact-item">
+                    <h2><i class="icon">📞</i> Телефон</h2>
+                    <p>+123 (123) 12 34</p>
+                </div>
+
+                <div class="contact-item">
+                    <h2><i class="icon">✉️</i> Электронная почта</h2>
+                    <p>restaurant@luxestar.ru</p>
+                </div>
+
+                <div class="contact-item">
+                    <h2><i class="icon">⏰</i> Часы работы</h2>
+                    <p>Пн-Пт: 12:00 - 00:00</p>
+                    <p>Сб-Вс: 12:00 - 22:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Ресторан Luxe Star.</p>
+    </div>
+</body>
+</html>

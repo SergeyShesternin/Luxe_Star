@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Меню Luxe Star</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <button class="active" onclick="showCategory('main')">Основные блюда</button>
+        <button onclick="showCategory('soups')">Супы</button>
+        <button onclick="showCategory('pasta')">Пасты</button>
+        <button onclick="showCategory('sides')">Гарниры</button>
+        <button onclick="showCategory('bar')">Бар</button>
+    </div>
+
+    <div class="content">
+        <div id="main" class="menu">
+            <div class="card" data-id="3">
+                <img src="static/img/riba.jpg" alt="Палтус">
+                <div class="info">
+                    <h4>Палтус</h4>
+                    <p>4200 ₽</p>
+                    <button onclick="addToCart(3, 'Палтус', 4200, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="4">
+                <img src="static/img/file_min.jpg" alt="Филе минион">
+                <div class="info">
+                    <h4>Филе минион</h4>
+                    <p>4900 ₽</p>
+                    <button onclick="addToCart(4, 'Филе минион', 4900, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="1">
+                <img src="static/img/ug_fish.jpg" alt="Угольная рыба">
+                <div class="info">
+                    <h4>Угольная рыба</h4>
+                    <p>2500 ₽</p>
+                    <button onclick="addToCart(1, 'Угольная рыба', 2500, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="2">
+                <img src="static/img/utka.jpg" alt="Утка">
+                <div class="info">
+                    <h4>Утка</h4>
+                    <p>3100 ₽</p>
+                    <button onclick="addToCart(2, 'Утка', 3100, this)">Добавить</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="soups" class="menu" style="display:none;">
+            <div class="card" data-id="3">
+                <img src="static/img/gaspacho.jpg" alt="Гаспачо с сорбетом из печёного болгарского перца">
+                <div class="info">
+                    <h4>Гаспачо с сорбетом из печёного болгарского перца</h4>
+                    <p>950 ₽</p>
+                    <button onclick="addToCart(3, 'Гаспачо с сорбетом из печёного болгарского перца', 950, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="4">
+                <img src="static/img/rib_sup.jpg" alt="Сицилийский рыбный суп">
+                <div class="info">
+                    <h4>Сицилийский рыбный суп</h4>
+                    <p>2550 ₽</p>
+                    <button onclick="addToCart(4, 'Сицилийский рыбный суп', 2550, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="5">
+                <img src="static/img/sup_pure.jfif" alt="Суп-пюре из молодого зелёного горошка со шпинатом, рикоттой и мятой">
+                <div class="info">
+                    <h4>Суп-пюре из молодого зелёного горошка со шпинатом, рикоттой и мятой</h4>
+                    <p>750 ₽</p>
+                    <button onclick="addToCart(5, 'Суп-пюре из молодого зелёного горошка со шпинатом, рикоттой и мятой', 750, this)">Добавить</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="pasta" class="menu" style="display:none;">
+            <div class="card" data-id="6">
+                <img src="static/img/spageti_pomid.webp" alt="Спагетти с помидорами и бурратой">
+                <div class="info">
+                    <h4>Спагетти с помидорами и бурратой</h4>
+                    <p>1850 ₽</p>
+                    <button onclick="addToCart(6, 'Спагетти с помидорами и бурратой', 1850, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="7">
+                <img src="static/img/pasta-s-moreproduktami.jpg" alt="Спагетти с морепродуктами">
+                <div class="info">
+                    <h4>Спагетти с морепродуктами</h4>
+                    <p>1400 ₽</p>
+                    <button onclick="addToCart(7, 'Спагетти с морепродуктами', 1400, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="8">
+                <img src="static/img/spaghetti_bottarg.webp" alt="Спагетти с боттаргой из икры кефали, помидорами, каперсами и оливками">
+                <div class="info">
+                    <h4>Спагетти с боттаргой из икры кефали, помидорами, каперсами и оливками</h4>
+                    <p>900 ₽</p>
+                    <button onclick="addToCart(8, 'Спагетти с боттаргой из икры кефали, помидорами, каперсами и оливками', 900, this)">Добавить</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sides" class="menu" style="display:none;">
+            <div class="card" data-id="9">
+                <img src="static/img/french_pure.webp" alt="Французское пюре">
+                <div class="info">
+                    <h4>Французское пюре</h4>
+                    <p>900 ₽</p>
+                    <button onclick="addToCart(9, 'Французское пюре', 900, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="10">
+                <img src="static/img/ovoshi.jfif" alt="Овощи с сырным соусом и кремом из базилика">
+                <div class="info">
+                    <h4>Овощи с сырным соусом и кремом из базилика</h4>
+                    <p>1400 ₽</p>
+                    <button onclick="addToCart(10, 'Овощи с сырным соусом и кремом из базилика', 1400, this)">Добавить</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="bar" class="menu" style="display:none;">
+            <div class="card" data-id="11">
+                <img src="static/img/voda.jpg" alt="Вода - SAN BENEDETTO STILL / SPARKLIN">
+                <div class="info">
+                    <h4>Вода - SAN BENEDETTO STILL / SPARKLIN</h4>
+                    <p>500 ₽</p>
+                    <button onclick="addToCart(11, 'Вода - SAN BENEDETTO STILL / SPARKLIN', 500, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="12">
+                <img src="static/img/cola.webp" alt="COCA-COLA">
+                <div class="info">
+                    <h4>COCA-COLA</h4>
+                    <p>800 ₽</p>
+                    <button onclick="addToCart(12, 'COCA-COLA', 800, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="13">
+                <img src="static/img/cheilon.jpg" alt="Черный Цейлон">
+                <div class="info">
+                    <h4>Чёрный Цейлон</h4>
+                    <p>900 ₽</p>
+                    <button onclick="addToCart(13, 'Чёрный Цейлон', 900, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="14">
+                <img src="static/img/sente_se.jpg" alt="Чай Сентя Сё">
+                <div class="info">
+                    <h4>Чай Сентя Сё</h4>
+                    <p>900 ₽</p>
+                    <button onclick="addToCart(14, 'Чай Сентя Сё', 900, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="15">
+                <img src="static/img/amerikano.jpg" alt="Американо">
+                <div class="info">
+                    <h4>Американо</h4>
+                    <p>390 ₽</p>
+                    <button onclick="addToCart(15, 'Американо', 390, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="16">
+                <img src="static/img/espresso.jpg" alt="Эспрессо">
+                <div class="info">
+                    <h4>Эспрессо</h4>
+                    <p>390 ₽</p>
+                    <button onclick="addToCart(16, 'Эспрессо', 390, this)">Добавить</button>
+                </div>
+            </div>
+            <div class="card" data-id="17">
+                <img src="static/img/kapuchino.jpg" alt="Капучино/Латте">
+                <div class="info">
+                    <h4>Капучино/Латте</h4>
+                    <p>490 ₽</p>
+                    <button onclick="addToCart(17, 'Капучино/Латте', 490, this)">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart" onclick="toggleCart()">Корзина</div>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <h3>Корзина</h3>
+            <div id="cartItems">Корзина пуста</div>
+            <div id="cartTotal"></div>
+            <button class="close-btn" onclick="toggleCart()">Закрыть</button>
+            <form action="/delivery">
+                <button class="delivery-btn">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const cart = {};
+
+        function addToCart(id, name, price, btn) {
+            if (!cart[id]) {
+                cart[id] = { name, price, count: 1 };
+                btn.textContent = "Добавлено";
+                btn.style.backgroundColor = "#6c757d";
+                btn.disabled = true;
+            } else {
+                cart[id].count += 1;
+            }
+            updateCartDisplay();
+        }
+
+        function removeFromCart(id, btn) {
+            if (cart[id]) {
+                cart[id].count -= 1;
+                if (cart[id].count <= 0) {
+                    delete cart[id];
+                    const card = document.querySelector(`.card[data-id='${id}']`);
+                    if (card) {
+                        const addButton = card.querySelector("button");
+                        addButton.textContent = "Добавить";
+                        addButton.style.backgroundColor = "#560c0e";
+                        addButton.disabled = false;
+                    }
+                }
+            }
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const orderBtn = document.querySelector('.delivery-btn');
+            if (orderBtn) {
+                orderBtn.disabled = Object.keys(cart).length === 0;
+            }
+
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            let html = '';
+            let total = 0;
+
+            for (const id in cart) {
+                const item = cart[id];
+                html += `
+                    <div>
+                        ${item.name} × ${item.count} — ${item.count * item.price} ₽
+                        <button onclick="addToCart(${id}, '${item.name}', ${item.price}, this)">➕</button>
+                        <button onclick="removeFromCart(${id}, this)">➖</button>
+                    </div>
+                `;
+                total += item.count * item.price;
+            }
+
+            cartItems.innerHTML = html || "Корзина пуста";
+            cartTotal.textContent = total ? `Сумма: ${total} ₽` : "";
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            if (modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            } else {
+                updateCartDisplay();
+                modal.style.display = 'flex';
+            }
+        }
+
+        function showCategory(category) {
+            ['main', 'soups', 'pasta', 'sides', 'bar'].forEach(c => {
+                document.getElementById(c).style.display = c === category ? 'grid' : 'none';
+            });
+            document.querySelectorAll('.sidebar button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

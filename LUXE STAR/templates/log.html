@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Вход в аккаунт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Вход</h2>
+        <form method="POST">
+            <input type="text" name="email" placeholder="Введите почту">
+            <input type="password" name="password" placeholder="Введите пароль">
+            <a href="/reg">Зарегистрироваться</a>
+            <a href="/forgot_pass">Забыли пароль?</a>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+</body>
+</html>

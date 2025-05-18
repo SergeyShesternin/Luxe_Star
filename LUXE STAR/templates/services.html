@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Услуги - Luxe Star</title>
+</head>
+<body>
+    <div class="header-background">
+        <div class="header-overlay"></div>
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+            <h1>Наш ресторан Luxe Star</h1>
+            <nav class="nav">
+                <a href="/" class="nav-button">Главная</a>
+                <a href="/menu" class="nav-button">Меню</a>
+                <a href="/services" class="nav-button active">Услуги</a>
+                <a href="/contacts" class="nav-button">Контакты</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="services-container">
+        <div class="services-content">
+            <h1>Наши услуги</h1>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="{{ url_for('static', filename='img/air_food.jpg') }}" alt="Бортовое питание">
+                    </div>
+                    <h2>Бортовое питание</h2>
+                    <p>Готовим и доставляем изысканные блюда для авиарейсов.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="{{ url_for('static', filename='img/cakes.jpeg') }}" alt="Торты на заказ">
+                    </div>
+                    <h2>Торты на заказ</h2>
+                    <p>Авторские торты по любым рецептам.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="{{ url_for('static', filename='img/bankets.jfif') }}" alt="Банкеты">
+                    </div>
+                    <h2>Банкеты</h2>
+                    <p>Организация банкетов до 200 человек.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Ресторан Luxe Star.</p>
+    </div>
+</body>
+</html>
