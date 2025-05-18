@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма доставки</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="delivery-container">
+        <h2>Форма доставки</h2>
+        {% if error_message %}
+            <div class="error">{{ error_message }}</div>
+        {% endif %}
+        {% if success_message %}
+            <div class="success">{{ success_message }}</div>
+        {% endif %}
+        <form method="POST">
+            <div class="form-group">
+                <label for="address">Адрес доставки</label>
+                <input type="text" id="address" name="address" placeholder="Введите адрес (Например: Улица 1-я Владимирская дом 9)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="door_code">Код от домофона</label>
+                <input type="text" id="door_code" name="door_code" placeholder="Введите код от домофона" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment_method">Способ оплаты</label>
+                <select id="payment_method" name="payment_method" required>
+                    <option value="cash">Наличные</option>
+                    <option value="cash_on_delivery">Картой при получении</option>
+                    <option value="online">Картой онлайн</option>
+                </select>
+            </div>
+
+            <button type="submit">Заказать</button>
+        </form>
+    </div>
+</body>
+</html>

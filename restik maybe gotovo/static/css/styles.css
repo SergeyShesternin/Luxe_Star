@@ -6,11 +6,18 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+<<<<<<< Updated upstream
     min-height: 100vh;
     font-family: Arial, sans-serif;
     color: #fff;
     text-shadow: #000 -1px -1px 0,
                  #000 1px 1px 0;
+=======
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial Black, sans-serif;
+    color: #fff;
+>>>>>>> Stashed changes
     overflow-x: hidden;
     position: relative;
 }/* основные стили страницы шрифт, тень текста */
@@ -344,3 +351,347 @@ body {
 .login-btn:hover {
     background-color: #7b1114;
 }
+<<<<<<< Updated upstream
+=======
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.container form {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.container h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: black;
+}
+
+.container a {
+    display: block;
+    margin: 10px 0;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.container button {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.container .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.container .success {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.container button[type="submit"] {
+    background-color: #560c0e;
+}
+
+.container button[type="submit"]:hover {
+    background-color: #7b1114;
+}
+
+.container #recovery-btn {
+    background-color: #560c0e;
+}
+
+.container #recovery-btn:hover {
+    background-color: #7b1114;
+}
+
+.sidebar {
+    width: 2200px;
+    background: #343a40;
+    color: white;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: line;
+    align-items: center;
+    height: fixed;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar button {
+    width: 406px;
+    margin: 10px;
+    padding: 12px;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+    background: white;
+    color: #343a40;
+}
+
+.content {
+    display: grid;
+    position: center;
+    grid-template-columns: repeat(auto-fill, minmax(2000px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 100px;
+    max-height: 400px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: black;
+}
+
+.info p {
+    margin: 0;
+    color: #444;
+}
+
+.info button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #560c0e;
+    color: white;
+}
+
+.info button:hover {
+    background: #7b1114;
+}
+
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #560c0e;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 300px;
+}
+
+#cartItems {
+    color: black;
+    font-size: 16px;
+}
+
+#cartTotal {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.modal-content p {
+    margin: 10px 0;
+    color: black;
+}
+
+.modal-content button,
+.modal-content a {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.close-btn {
+    background: #6c757d;
+    color: white;
+    margin-right: 10px;
+}
+
+.delivery-btn {
+    background: #560c0e;
+    color: white;
+}
+
+.delivery-container {
+    max-width: 600px;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 40px auto;
+}
+
+.delivery-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.delivery-container .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.delivery-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: black;
+}
+
+.delivery-container input,
+.delivery-container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.delivery-container button {
+    width: 100%;
+    padding: 14px;
+    background-color: #560C0E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delivery-container button:hover {
+    background-color: #7b1114;
+}
+
+.delivery-container .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.delivery-container .success {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+>>>>>>> Stashed changes
